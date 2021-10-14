@@ -8,6 +8,7 @@ services:
       - type: bind
         source: ./src/
         target: /home/src/
+    working_dir: /home/
     ports:
       - 8888:8888
     tty: true
