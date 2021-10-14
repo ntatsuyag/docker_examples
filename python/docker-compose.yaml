@@ -1,0 +1,14 @@
+version: '3'
+services: 
+  python_env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./src/
+        target: /home/
+    ports:
+      - 8888:8888
+    tty: true
+    stdin_open: true

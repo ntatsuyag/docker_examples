@@ -1,0 +1,16 @@
+version: '3'
+services: 
+  jupyter_lab_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./src/
+        target: /home/src/
+    ports:
+      - 8888:8888
+    tty: true
+    stdin_open: true
+    command: jupyter lab --ip=0.0.0.0 --no-browser --allow-root
+    #command: jupyter lab --ip=0.0.0.0 --no-browser --allow-root --NotebookApp.token='' tokenを指定したいならこちらを使用する
