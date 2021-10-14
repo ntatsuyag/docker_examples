@@ -1,2 +1,3 @@
 # docker_examples
-Dockerfileやdocercompose.ymlを置いておく
+よく使いそうなDockerfileやdocercompose.ymlを置いておくレポジトリ。
+プログラムの実行環境を立てるためのものがほとんどです。
