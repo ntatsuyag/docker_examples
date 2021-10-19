@@ -10,7 +10,7 @@ services:
         target: /home/src/
     working_dir: /home/
     ports:
-      - 8888:8888
+      - 8888:8888 #デフォルトポート番号
     tty: true
     stdin_open: true
     command: jupyter lab --ip=0.0.0.0 --no-browser --allow-root
