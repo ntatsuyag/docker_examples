@@ -1,0 +1,22 @@
+version: '3'
+services: 
+  PT_env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    network_mode: host
+    # ports:
+    #   - 8888:8888
+    #   - 6006:6006
+    # volumes:
+    #   - type: bind
+    #     source: ./src/
+    #     target: /home/src/
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    tty: true
+    stdin_open: true
