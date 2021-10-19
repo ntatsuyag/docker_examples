@@ -8,7 +8,7 @@ jupyter labサーバーを立ち上げるためのcomposeファイル。\
 `docker-compose -f docker-compose_jupyter.yaml up` でサーバーが立ち上がります。\
 volumes,port等は適宜書き換えてください。
 
-# SSH等でリモートで確認したい場合
+# SSH等でJupyter等に接続したい場合
 ```
 ssh -L 8080:localhost:8080 [接続先]
 ```
